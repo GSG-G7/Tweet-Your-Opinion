@@ -1,3 +1,3 @@
-exports.login = (req, res, next) => {
+exports.home = (req, res, next) => {
 
 };
