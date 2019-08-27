@@ -7,7 +7,13 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test node tests/routes_test.js | tap-spec && NODE_ENV=test tests/db_test.js | tap-spec",
+    "dbtest": "NODE_ENV=test tests/db_test.js | tap-spec",
+    "routestest": "NODE_ENV=test node tests/routes_test.js | tap-spec",
+    "start": "NODE_ENV=production node src/index.js",
+    "dev": "NODE_ENV=development nodemon src/index.js",
+    "kill": "fuser -k 5000/tcp"
+    
   },
   "repository": {
     "type": "git",
