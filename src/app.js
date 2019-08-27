@@ -1,6 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const { join } = require('path');
+const { router } = require('./controllers');
 
 const app = express();
 
@@ -22,5 +23,5 @@ app.engine(
     defaultLayout: 'main',
   }),
 );
-
+app.use(router);
 module.exports = app;
