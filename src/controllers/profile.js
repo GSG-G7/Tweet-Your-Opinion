@@ -1,3 +1,3 @@
 exports.profile = (req, res, next) => {
-
+  res.render('profile');
 };
