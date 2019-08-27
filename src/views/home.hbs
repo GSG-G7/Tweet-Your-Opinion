@@ -1,1 +1,13 @@
   {{> header}}
+<section class="post-section">
+  {{#each postsArray}}
+    <div class="post-content">
+      <h1 class="username">{{this.username}}</h1>
+      <h2 class='post-category'>{{this.category}}</h2>
+      <p class="post-text">{{this.content}}</p>
+      <div class="img-container">
+        <img class="post-img" src={{this.img_url}} alt="post image">
+      </div>
+    </div>
+  {{/each}}
+</section>
