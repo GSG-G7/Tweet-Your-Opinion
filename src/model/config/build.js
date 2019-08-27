@@ -5,5 +5,5 @@ const { join } = require('path');
 
 const dbInit = readFileSync(join(__dirname,'build.sql')).toString();
 
-dbConnection.query(dbInit);
+module.exports = dbConnection.query(dbInit);
 
