@@ -7,6 +7,7 @@ const app = express();
 const port = process.env.PORT || 5000;
 app.set('port', port);
 
+app.use(express.static(join(__dirname, '..', 'public')))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
