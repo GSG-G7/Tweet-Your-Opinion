@@ -7,7 +7,7 @@ const { profile } = require('./profile');
 const { postLogin } = require('./postLogin');
 const { postSignup } = require('./postSignup');
 const { addPost } = require('./addPost');
-const { clientError, serverError } = require('./error');
+const { client, server } = require('./error');
 
 const router = express.Router();
 
@@ -21,7 +21,7 @@ router.post('/login', postLogin);
 router.post('/signup', postSignup);
 router.post('/add_post', addPost);
 
-router.use(clientError);
-router.use(serverError);
+router.use(client);
+router.use(server);
 
 exports.router = router;
