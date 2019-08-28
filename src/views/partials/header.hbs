@@ -4,8 +4,16 @@
     <ul>
       <li><a href="/" target="blank">HOME</a></li>
       <li><a href="/profile" target="blank">PROFILE</a></li>
+      {{#if cook}}
+      <li><a href="/profile" target="blank">wellcome to <span>{{cook}}</span></a></li>
+      <li><a href="/signout" target="blank">SING OUT</a></li>
+
+      {{else}}
       <li><a href="/login" target="blank">LOGIN</a></li>
       <li><a href="/signup" target="blank">SIGN UP</a></li>
-   </ul>
+      {{/if}}
+
+
+    </ul>
   </nav>
 </header>
