@@ -29,7 +29,7 @@ router.get('/profile', verfiyToken, profile);
 
 router.post('/login', postLogin);
 router.post('/signup', postSignup);
-router.post('/add_post', addPost);
+router.post('/addPost', addPost);
 
 router.use(client);
 router.use(server);
