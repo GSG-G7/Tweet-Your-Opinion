@@ -18,11 +18,11 @@ exports.postLogin = (req, res, next) => {
       res.cookie('login', token);
       // console.log(req.cookies.login);
 
-      res.redirect('/');
+      res.redirect('/profile');
     })
     .catch((err) => {
       console.log('sdfjlsdjflsd');
-      if (err.message === 'user not found') { res.send('<p>not kfnhkn</p>'); }
+      if (err.message === 'user not found') { res.send('<p>Go Home</p>'); }
     });
 
 

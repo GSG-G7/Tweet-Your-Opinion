@@ -1,38 +1,42 @@
-<main>
-  <form action="/signup" method="POST">
-    <div>
-      <label for="username">Username</label>
-      <input type="text" name="username" id="signup__username">
-    </div>
+<main id='container'>
+  <div class="form-wrap">
+    <h1>Sign Up</h1>
+    <p>do you already have an account? <a href="/login">Login</a></p>
+    
+    <form action="/signup" method="POST">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input class="username" type="text" name="username" id="signup__username">
+      </div>
 
-    <div>
-      <label for="email">Email</label>
-      <input type="email" name="email" id="signup__email">
-    </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="email" type="email" name="email" id="signup__email" required>
+      </div>
 
-    <div>
-      <label for="password">Password</label>
-      <input type="password" name="password" id="signup__password">
-    </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="password" type="password" name="password" id="signup__password" required>
+      </div>
 
-    <div>
-      <label for="confirm_password">Confirm Your Password</label>
-      <input type="password" name="confirm_password" id="signup__confirmpassword">
-    </div>
+      <div class="form-group">
+        <label for="confirm_password">Confirm Your Password</label>
+        <input class="confirm-password" type="password" name="confirm_password" id="signup__confirmpassword" required>
+      </div>
 
-    <div>
-      <label for="mobile_no">Mobile Number</label>
-      <input type="number" name="mobile_no" id="signup__mobilenomber">
+      <div class="form-group">
+        <label for="mobile_no">Mobile Number</label>
+        <input class="mobile_no" type="number" name="mobile_no" id="signup__mobilenomber" required>
+      </div>
+    
+      <div class="form-group">
+        <label for="date_of_birth">Date Of Birth</label>
+        <input class="date-of-birth" type="date" name="date_of_birth" id="signup__dateofbirth" required>
+      </div>
 
-    </div>
-  
-    <div>
-      <label for="date_of_birth">Date Of Birth</label>
-      <input type="date" name="date_of_birth" id="signup__dateofbirth">
-    </div>
-
-    <div>
-      <button type="submit" id="signup__button">Sign Up</button>
-    </div>
-  </form>
+      <button type="submit" class="btn">Sign Up</button>
+      <P class="bottom-text">By clicking the sign up button you agree to our <a href="#">Terms & Conditions</a>
+          and <a href="#">Privacy Policy</a></P>
+    </form>
+  </div>
 </main>
