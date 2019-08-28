@@ -24,25 +24,24 @@ exports.postLogin = (req, res, next) => {
           const token = jwt.sign({
             username: userName,
           }, process.env.SECRET);
-          // console.log(jwt.verify(token, process.env.SECRET));
           res.cookie('login', token);
-          // console.log(req.cookies.login);
 
-          res.redirect('/');
+          res.redirect('/profile');
         })
         .catch((err) => {
-          if (err.message === 'user not found') {
-            res.send('<p>not kfnhkn</p>');
-          }
+          console.log('sdfjlsdjflsd');
+          if (err.message === 'user not found') { res.send('<p>Go Home</p>'); }
         });
+
+
+      bycrpt.genSalt(10)
+        .then((salt) => bycrpt.compare(req.body.password, salt))
+        .then((hashed) => getPassword(userName)
+          .then((pass) => {
+            console.log(hashed);
+            console.log(pass.rows[0].password);
+          })
+          .then((ress) => console.log(ress)).catch((err) => { console.log(err); }));
     }
   });
-  bycrpt.genSalt(10)
-    .then((salt) => bycrpt.compare(req.body.password, salt))
-    .then((hashed) => getPassword(userName)
-      .then((pass) => {
-        console.log(hashed);
-        console.log(pass.rows[0].password);
-      })
-      .then((ress) => console.log(ress)).catch((err) => { console.log(err); }));
 };
