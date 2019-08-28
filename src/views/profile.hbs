@@ -2,14 +2,14 @@
 <main>
   <section class="form-section">
     <form action="/addPost" method="post">
-      <textarea name="post-text" id="text" class="post-text" cols="30" rows="10" placeholder="Write your post here"></textarea>
+      <textarea name="post-text" id="text" class="post-text" cols="30" rows="10"
+        placeholder="Write your post here"></textarea>
       <label for="post-category">Category</label>
       <input name="post-category" type="text">
       <input type="text" name="post-img" id="post-image" placeholder="Add image URL here">
       <button class="add-post-btn" type="submit">Add Post</button>
     </form>
   </section>
-
   <section class="post-section">
     {{#each postsArray}}
     <div class="post-content">
