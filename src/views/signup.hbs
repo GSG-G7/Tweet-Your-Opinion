@@ -1,36 +1,38 @@
-<form action="/signup" method="POST">
-  <div>
-    <label for="username">Username</label>
-    <input type="text" name="username" id="signup__username">
-  </div>
+<main>
+  <form action="/signup" method="POST">
+    <div>
+      <label for="username">Username</label>
+      <input type="text" name="username" id="signup__username">
+    </div>
 
-  <div>
-    <label for="email">Email</label>
-    <input type="text" name="email" id="signup__email">
-  </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="signup__email">
+    </div>
 
-  <div>
-    <label for="password">Password</label>
-    <input type="text" name="password" id="signup__password">
-  </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="signup__password">
+    </div>
 
-  <div>
-    <label for="confirm_password">Confirm Your Password</label>
-    <input type="text" name="confirm_password" id="signup__confirmpassword">
-  </div>
+    <div>
+      <label for="confirm_password">Confirm Your Password</label>
+      <input type="password" name="confirm_password" id="signup__confirmpassword">
+    </div>
 
-  <div>
-    <label for="mobile_no">Mobile Number</label>
-    <input type="text" name="mobile_no" id="signup__mobilenomber">
+    <div>
+      <label for="mobile_no">Mobile Number</label>
+      <input type="number" name="mobile_no" id="signup__mobilenomber">
 
-  </div>
+    </div>
   
-  <div>
-    <label for="date_of_birth">Date Of Birth</label>
-    <input type="text" name="date_of_birth" id="signup__dateofbirth">
-  </div>
+    <div>
+      <label for="date_of_birth">Date Of Birth</label>
+      <input type="date" name="date_of_birth" id="signup__dateofbirth">
+    </div>
 
-  <div>
-    <button type="submit" id="signup__button">Sign Up</button>
-  </div>
-</form>
+    <div>
+      <button type="submit" id="signup__button">Sign Up</button>
+    </div>
+  </form>
+</main>

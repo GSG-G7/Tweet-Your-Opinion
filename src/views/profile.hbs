@@ -1,23 +1,25 @@
 {{> header}}
-<section class="form-section">
-  <form action="/addPost" method="post">
-    <textarea name="post-text" id="text" class="post-text" cols="30" rows="10" placeholder="Write your post here"></textarea>
-    <label for="post-category">Category</label>
-    <input name="post-category" type="text">
-    <input type="text" name="post-img" id="post-image" placeholder="Add image URL here">
-    <button class="add-post-btn" type="submit">Add Post</button>
-  </form>
-</section>
+<main>
+  <section class="form-section">
+    <form action="/addPost" method="post">
+      <textarea name="post-text" id="text" class="post-text" cols="30" rows="10" placeholder="Write your post here"></textarea>
+      <label for="post-category">Category</label>
+      <input name="post-category" type="text">
+      <input type="text" name="post-img" id="post-image" placeholder="Add image URL here">
+      <button class="add-post-btn" type="submit">Add Post</button>
+    </form>
+  </section>
 
-<section class="post-section">
-  {{#each postsArray}}
-  <div class="post-content">
-    <h1 class="username">{{this.username}}</h1>
-    <h2 class='post-category'>{{this.category}}</h2>
-    <p class="post-text">{{this.content}}</p>
-    <div class="img-container">
-      <img class="post-img" src={{this.img_url}} alt="post image">
+  <section class="post-section">
+    {{#each postsArray}}
+    <div class="post-content">
+      <h1 class="username">{{this.username}}</h1>
+      <h2 class='post-category'>{{this.category}}</h2>
+      <p class="post-text">{{this.content}}</p>
+      <div class="img-container">
+        <img class="post-img" src={{this.img_url}} alt="post image">
+      </div>
     </div>
-  </div>
-  {{/each}}
-</section>
+    {{/each}}
+  </section>
+</main>
