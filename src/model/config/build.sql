@@ -1,5 +1,5 @@
 BEGIN;
-DROP TABLE IF EXISTS client CASCADE;
+DROP TABLE IF EXISTS client,post CASCADE;
 
 CREATE TABLE client (
   user_id  SERIAL PRIMARY KEY NOT NULL,
@@ -13,8 +13,9 @@ CREATE TABLE client (
 
 CREATE TABLE post (
   post_id SERIAL PRIMARY KEY NOT NULL,
-  catgory VARCHAR(60) NOT NULL,
+  category VARCHAR(60) NOT NULL,
   content VARCHAR NOT NULL,
+  img_url  text,
   user_id INTEGER REFERENCES client (user_id)
 );
 
