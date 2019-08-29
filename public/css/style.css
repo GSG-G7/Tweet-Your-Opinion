@@ -16,9 +16,25 @@ body{
   width: 60%;
   margin: auto
 }
+
+.nav-container{
+  display: fl
+}
+.logo{
+  width:50px;
+  float: left;
+  margin-right: 5%
+}
+header{
+  position: sticky;
+  top:0;
+  padding:0.75rem;
+  background: rgb(207, 138, 138);
+}
 .nav__list{
   display: flex;
   justify-content: space-between;
+
 }
 .nav_item{
   list-style: none
