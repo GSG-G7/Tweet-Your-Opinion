@@ -12,7 +12,7 @@ The user can create an account (sign up), and login or logout. He can add posts 
 ## How?
 - read the project requirements and discuss them together
 - think of our database schema and design it using dbdesigner
-![schema design]()
+![schema design](https://cdn.discordapp.com/attachments/616266466060271656/616266542727954432/download.png)
 ...
 - Make tests for server routs.
 - Create Express server
