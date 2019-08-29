@@ -13,7 +13,7 @@ tape('testing the home page route', (t) => {
         t.error(err);
         t.end();
       } else {
-        t.ok(res.text.includes('<nav>', 'the home page should have a nav bar'));
+        t.ok(res.text.includes('<header>', 'the home page should have a nav bar'));
         t.end();
       }
     });
