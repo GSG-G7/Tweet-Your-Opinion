@@ -10,22 +10,16 @@ const { postLogin } = require('./postLogin');
 const { postSignup } = require('./postSignup');
 const { addPost } = require('./addPost');
 const { client, server } = require('./error');
-require('env2')('config.env');
+const { verfiyTokenLoged } = require('../controllers/auth/verfiyUser');
+const { verfiyTokenUnLoged } = require('../controllers/auth/verfiyUser');
 
 const router = express.Router();
-const verfiyToken = (req, res, next) => {
-  jwt.verify(req.cookies.login, process.env.SECRET, (err, rest) => {
-    if (err) {
-      res.redirect('/login');
-    } else next();
-  });
-};
 
 router.get('/', home);
-router.get('/login', login);
-router.get('/signup', signup);
+router.get('/login', verfiyTokenUnLoged, login);
+router.get('/signup', verfiyTokenUnLoged, signup);
 router.get('/signout', signout);
-router.get('/profile', verfiyToken, profile);
+router.get('/profile', verfiyTokenLoged, profile);
 
 router.post('/login', postLogin);
 router.post('/signup', postSignup);
