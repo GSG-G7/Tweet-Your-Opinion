@@ -9,8 +9,39 @@
 body{
   font-family:'Raleway';
   line-height:1.8;
+  background-color: #000;
+  color: #9B9C9D;
 }
-
+.container{
+  width: 60%;
+  margin: auto
+}
+.nav__list{
+  display: flex;
+  justify-content: space-between;
+}
+.nav_item{
+  list-style: none
+}
+.post-section{
+  background-color: rgb(41, 40, 40)
+}
+.post-content{
+  border:1px solid #999;
+  margin: 1% 0;
+  background-color: #000;
+  padding: 2%;
+}
+.post-content:hover{
+  background-color: rgb(22, 22, 22);
+  transition:  all 0.3s ease-in-out;
+}
+.img-container{
+  width: 100%;
+}
+.post-img{
+  width: 100%
+}
 a{
   text-decoration:none;
 }
